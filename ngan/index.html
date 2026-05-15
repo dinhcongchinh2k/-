@@ -259,19 +259,26 @@ document.querySelector(".name").onclick=()=>{
 };
 
 /* REFRESH QR */
-function refreshQR(){
-    const img=document.getElementById("qrImage");
-    const loading=document.getElementById("qrLoading");
+function refreshQR() {
+    const img = document.getElementById("qrImage");
+    const loading = document.getElementById("qrLoading");
 
-    img.style.opacity="0.4";
-    loading.style.display="block";
+    img.style.opacity = "0.4";
+    loading.style.display = "block";
 
-    setTimeout(()=>{
-        img.src="qr.png?t="+Date.now();
-        img.style.opacity="1";
-        loading.style.display="none";
-    },600);
+    setTimeout(() => {
+        // Kiểm tra: nếu đang là qr.png thì đổi sang qr2.png, ngược lại thì về qr.png
+        if (img.src.includes("qr.png")) {
+            img.src = "qr2.png?t=" + Date.now();
+        } else {
+            img.src = "qr.png?t=" + Date.now();
+        }
+        
+        img.style.opacity = "1";
+        loading.style.display = "none";
+    }, 600);
 }
+
 
 /* BLOCK ZOOM */
 document.addEventListener('touchmove', function(e){
