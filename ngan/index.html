@@ -135,6 +135,22 @@ body{
     font-size:17px;
 }
 
+.effective-text {
+    color: #00FF00; /* Màu xanh lá sáng */
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    /* Lệnh tạo hiệu ứng nháy */
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0; /* Làm mờ đi 50% thời gian */
+    }
+}
+
 /* TIMER */
 .timer{
     margin-top:8px;
