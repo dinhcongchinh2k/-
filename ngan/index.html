@@ -65,13 +65,20 @@ body{
 }
 
 /* HEADER */
-.card-header{
-    position:relative;
-    background:#ffb703;
-    color:#fff;
-    padding:6px 12px;
-    font-size:16px;
+.card-header {
+    position: relative;
+    background: #ffb703;
+    color: #fff;
+    /* 1. Dịch chữ về bên trái */
+    text-align: left; 
+    /* 2. Tăng padding bên trái để chữ không sát mép (hiện tại là 12px, có thể tăng lên 20px) */
+    padding: 10px 20px; 
+    /* 3. Chỉnh chữ to hơn (hiện tại là 16px, bạn hãy thử 20px hoặc 22px) */
+    font-size: 20px; 
+    /* Thêm dòng này nếu muốn chữ đậm hơn */
+    font-weight: bold; 
 }
+
 
 .card-header::before,
 .card-header::after{
